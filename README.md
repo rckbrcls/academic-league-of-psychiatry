@@ -1,1 +1,0 @@
-# academic-league-of-psychiatry
