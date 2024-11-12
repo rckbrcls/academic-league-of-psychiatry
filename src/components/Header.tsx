@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className="flex w-full items-center justify-between fixed h-20 inset-x-0 top-0 z-10 bg-base-100 border-b-2 border-base-200">
       <div className="flex items-center gap-2">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">Liga</a>
       </div>
       <div className="flex items-center gap-2">
         <a className="btn">A+</a>
