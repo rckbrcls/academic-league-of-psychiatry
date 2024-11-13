@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-
 export default function Home() {
   return (
     <div className="flex h-svh mt-20 bg-base-100">
