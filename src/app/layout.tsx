@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider, ThemeWrapper } from "@/context/ThemeContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import { FontSizeProvider } from "@/context/FontSizeContext";
 
 export const metadata: Metadata = {
@@ -15,13 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider>
-          <ThemeWrapper>
-            <FontSizeProvider>{children}</FontSizeProvider>
-          </ThemeWrapper>
-        </ThemeProvider>
-      </body>
+      <ThemeProvider>
+        <body>
+          <FontSizeProvider>{children}</FontSizeProvider>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

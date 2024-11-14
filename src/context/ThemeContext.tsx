@@ -20,22 +20,30 @@ const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.body.dataset.theme = savedTheme;
-    } else {
-      document.body.dataset.theme = theme;
+    // Verifica se estamos no ambiente do cliente
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme") as Theme;
+      if (savedTheme) {
+        setTheme(savedTheme);
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } else {
+        document.documentElement.setAttribute("data-theme", theme);
+      }
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme]);
+
   const handleSetTheme = (newTheme: Theme) => {
     setTheme(newTheme);
-    document.body.dataset.theme = newTheme;
-    localStorage.setItem("theme", newTheme);
   };
 
   return (
@@ -51,16 +59,4 @@ export const useTheme = (): ThemeContextProps => {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
-};
-
-export const ThemeWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const { theme } = useTheme();
-
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  return <>{children}</>;
 };
