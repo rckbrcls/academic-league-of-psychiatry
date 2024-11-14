@@ -3,21 +3,74 @@
 import { useFontSize } from "@/context/FontSizeContext";
 import { useTheme } from "@/context/ThemeContext";
 import { ChevronLeft, Moon, Sun } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 export default function MeetingDetails() {
   return (
-    <div className="">
+    <div>
       <MeetingDetailsHeader />
+      <div className="relative w-full h-96">
+        <Image
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+          src={"/meeting.png"}
+          alt="cover-meetings"
+        />
+      </div>
+
+      <div className="p-10">
+        <p className="text-5xl font-bold">Reunião sobre algo</p>
+        <p className=" mt-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
+          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
+          lorem. Nunc porta finibus dolor, ut ullamcorper ex feugiat in.
+          Suspendisse id vehicula dui. Vivamus maximus ex neque. Phasellus
+          scelerisque tempus massa, luctus rutrum tortor aliquet quis. In in
+          tortor arcu. Nunc ut neque eu mauris tempor molestie sit amet vitae
+          urna. Pellentesque vel quam gravida augue hendrerit consequat at ac
+          lectus. Sed pulvinar risus vitae dapibus interdum. Integer eget
+          rhoncus libero. Vestibulum ante ipsum primis in faucibus orci luctus
+          et ultrices posuere cubilia curae; Pellentesque sit amet augue
+          feugiat, suscipit est nec, mattis sem. Nunc felis massa, vestibulum
+          vitae nunc bibendum
+        </p>
+        <p className=" mt-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
+          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
+          lorem. Nunc porta finibus dolor, ut ullamcorper ex feugiat in.
+          Suspendisse id vehicula dui. Vivamus maximus ex neque. Phasellus
+          scelerisque tempus massa, luctus rutrum tortor aliquet quis. In in
+          tortor arcu. Nunc ut neque eu mauris tempor molestie sit amet vitae
+          urna. Pellentesque vel quam gravida augue hendrerit consequat at ac
+          lectus. Sed pulvinar risus vitae dapibus interdum. Integer eget
+          rhoncus libero. Vestibulum ante ipsum primis in faucibus orci luctus
+          et ultrices posuere cubilia curae; Pellentesque sit amet augue
+          feugiat, suscipit est nec, mattis sem. Nunc felis massa, vestibulum
+          vitae nunc bibendum
+        </p>
+        <p className=" mt-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
+          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
+          lorem. Nunc porta finibus dolor, ut ullamcorper ex feugiat in.
+          Suspendisse id vehicula dui. Vivamus maximus ex neque. Phasellus
+          scelerisque tempus massa, luctus rutrum tortor aliquet quis. In in
+          tortor arcu. Nunc ut neque eu mauris tempor molestie sit amet vitae
+          urna. Pellentesque vel quam gravida augue hendrerit consequat at ac
+          lectus. Sed pulvinar risus vitae dapibus interdum. Integer eget
+          rhoncus libero. Vestibulum ante ipsum primis in faucibus orci luctus
+          et ultrices posuere cubilia curae; Pellentesque sit amet augue
+          feugiat, suscipit est nec, mattis sem. Nunc felis massa, vestibulum
+          vitae nunc bibendum
+        </p>
+      </div>
     </div>
   );
 }
 
 export const MeetingDetailsHeader = () => {
-  const pathname = usePathname();
   const router = useRouter();
   const { setTheme, theme } = useTheme();
   const { increaseFontSize, decreaseFontSize } = useFontSize();
