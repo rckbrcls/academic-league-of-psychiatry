@@ -47,7 +47,7 @@ export default function Mission() {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-4 auto-rows-fr h-svh px-10 pt-28 pb-10">
+    <div className="grid grid-cols-3 gap-4 auto-rows-fr px-10 pt-28 pb-10">
       {boxes.map((box, i) => (
         <Box
           key={i}
