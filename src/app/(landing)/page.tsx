@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex pt-20">
+    <div className="flex pt-20 min-h-screen">
       <div className="w-full p-10">
         <p className="text-5xl font-bold">Liga Acadêmica de Psiquiatria</p>
         <p className="text-2xl mt-2 mb-8">
@@ -21,7 +21,7 @@ export default function Home() {
           vitae nunc bibendum
         </p>
       </div>
-      <div className="bg-[#052B61] w-1/2 h-svh"></div>
+      <div className="bg-[#052B61] w-1/2 min-h-screen"></div>
     </div>
   );
 }
