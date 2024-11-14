@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Meetings() {
@@ -28,23 +29,25 @@ export default function Meetings() {
 
 export const MeetingCard = () => {
   return (
-    <div className="glass-dark w-full rounded-lg p-4 hover:scale-105 hover:cursor-pointer duration-500">
-      <div className="relative w-full h-48">
-        <Image
-          className="rounded-lg"
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          src={"/meeting.png"}
-          alt="cover-meetings"
-        />
+    <Link passHref href={"/meetings/1"}>
+      <div className="glass-dark w-full rounded-lg p-4 hover:scale-105 hover:cursor-pointer duration-500">
+        <div className="relative w-full h-48">
+          <Image
+            className="rounded-lg"
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+            src={"/meeting.png"}
+            alt="cover-meetings"
+          />
+        </div>
+        <p className="text-2xl font-bold mt-4">Reunião sobre algo</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
+          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
+          lorem...
+        </p>
       </div>
-      <p className="text-2xl font-bold mt-4">Reunião sobre algo</p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
-        arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
-        lorem...
-      </p>
-    </div>
+    </Link>
   );
 };

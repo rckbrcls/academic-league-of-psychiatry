@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/Header";
 import { ThemeProvider, ThemeWrapper } from "@/context/ThemeContext";
 import { FontSizeProvider } from "@/context/FontSizeContext";
 
@@ -19,10 +18,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <ThemeWrapper>
-            <FontSizeProvider>
-              <Header />
-              {children}
-            </FontSizeProvider>
+            <FontSizeProvider>{children}</FontSizeProvider>
           </ThemeWrapper>
         </ThemeProvider>
       </body>
