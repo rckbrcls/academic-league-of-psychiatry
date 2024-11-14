@@ -22,13 +22,18 @@ const FontSizeContext = createContext<FontSizeContextProps | undefined>(
 export const FontSizeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [fontSize, setFontSize] = useState<number>(16); // Tamanho base
+  const [fontSize, setFontSize] = useState<number>(() => {
+    // Carrega o valor do localStorage ou define o padrão
+    const savedFontSize = localStorage.getItem("fontSize");
+    return savedFontSize ? parseInt(savedFontSize, 10) : 16;
+  });
 
   useEffect(() => {
     document.documentElement.style.fontSize = `${fontSize}px`;
+    localStorage.setItem("fontSize", fontSize.toString()); // Salva no localStorage
   }, [fontSize]);
 
-  const increaseFontSize = () => setFontSize((prev) => Math.min(prev + 2, 24)); // Limita para no máximo 24px
+  const increaseFontSize = () => setFontSize((prev) => Math.min(prev + 2, 28)); // Limita para no máximo 28px
   const decreaseFontSize = () => setFontSize((prev) => Math.max(prev - 2, 12)); // Limita para no mínimo 12px
   const resetFontSize = () => setFontSize(16); // Reseta para o tamanho padrão de 16px
 
