@@ -21,7 +21,7 @@ export default function Home() {
           vitae nunc bibendum
         </p>
       </div>
-      <div className="bg-red-200 w-1/2 h-svh"></div>
+      <div className="bg-[#052B61] w-1/2 h-svh"></div>
     </div>
   );
 }

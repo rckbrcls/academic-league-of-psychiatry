@@ -15,12 +15,12 @@ export const Header = () => {
         </Link>
       </div>
       <div className="flex items-center gap-2">
-        <button className="btn">A+</button>
-        <button className="btn">A-</button>
-        <button className="btn">
+        <button className="btn btn-primary">A+</button>
+        <button className="btn btn-primary">A-</button>
+        <button className="btn btn-primary">
           <Moon />
         </button>
-        <button className="btn">
+        <button className="btn btn-primary">
           <Sun />
         </button>
       </div>
