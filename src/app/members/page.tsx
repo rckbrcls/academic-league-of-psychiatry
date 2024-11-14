@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Members() {
   return (
-    <div className="mt-20 p-4 h-svh">
+    <div className="pb-40 px-10 pt-24">
       <p className="text-4xl font-bold">Membros da Liga</p>
       <div className="glass-dark w-full rounded-xl p-4 flex flex-col gap-4 mt-6">
         <p className="text-2xl font-bold">Diretoria</p>

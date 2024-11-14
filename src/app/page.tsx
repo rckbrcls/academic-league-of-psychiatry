@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex h-svh mt-20 bg-base-100">
+    <div className="flex pt-20">
       <div className="w-full p-10">
         <p className="text-4xl">Liga Acadêmica de Psiquiatria</p>
         <p className="text-2xl mt-2 mb-10">
