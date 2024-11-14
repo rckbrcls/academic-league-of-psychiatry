@@ -1,5 +1,6 @@
 "use client";
 
+import { useTheme } from "@/context/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,6 +8,7 @@ import React from "react";
 
 export const Header = () => {
   const pathname = usePathname();
+  const { setTheme, theme } = useTheme();
   return (
     <div className="flex w-full items-center justify-between fixed h-20 inset-x-0 top-0 z-10 bg-base-100 border-b-2 border-base-200">
       <div className="flex items-center gap-2">
@@ -17,10 +19,20 @@ export const Header = () => {
       <div className="flex items-center gap-2">
         <button className="btn btn-primary">A+</button>
         <button className="btn btn-primary">A-</button>
-        <button className="btn btn-primary">
+        <button
+          onClick={() => setTheme("dark")}
+          className={`btn ${
+            theme === "dark" ? "btn-secondary" : "btn-primary"
+          }`}
+        >
           <Moon />
         </button>
-        <button className="btn btn-primary">
+        <button
+          onClick={() => setTheme("light")}
+          className={`btn ${
+            theme === "light" ? "btn-secondary" : "btn-primary"
+          }`}
+        >
           <Sun />
         </button>
       </div>
