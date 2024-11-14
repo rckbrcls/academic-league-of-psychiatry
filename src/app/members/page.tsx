@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Members() {
   return (
-    <div className="mt-20 p-4">
+    <div className="mt-20 p-4 h-svh">
       <p className="text-4xl font-bold">Membros da Liga</p>
-      <div className="bg-white w-full rounded-xl p-4 flex flex-col gap-4 mt-6">
+      <div className="glass-dark w-full rounded-xl p-4 flex flex-col gap-4 mt-6">
         <p className="text-2xl font-bold">Diretoria</p>
         <div className="overflow-x-auto flex w-full gap-4">
           {Array.from({ length: 20 }, (_, i) => (
@@ -20,7 +20,7 @@ export default function Members() {
           ))}
         </div>
       </div>
-      <div className="bg-white w-full rounded-xl p-4 flex flex-col gap-4 mt-6">
+      <div className="glass-dark w-full rounded-xl p-4 flex flex-col gap-4 mt-6">
         <p className="text-2xl font-bold">Membros</p>
         <div className="overflow-x-auto flex w-full gap-4">
           {Array.from({ length: 20 }, (_, i) => (

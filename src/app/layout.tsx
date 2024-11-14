@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { ThemeProvider, ThemeWrapper } from "@/context/ThemeContext";
+import { FontSizeProvider } from "@/context/FontSizeContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +19,10 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <ThemeWrapper>
-            <Header />
-            {children}
+            <FontSizeProvider>
+              <Header />
+              {children}
+            </FontSizeProvider>
           </ThemeWrapper>
         </ThemeProvider>
       </body>

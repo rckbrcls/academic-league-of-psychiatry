@@ -1,5 +1,6 @@
 "use client";
 
+import { useFontSize } from "@/context/FontSizeContext";
 import { useTheme } from "@/context/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import Link from "next/link";
@@ -9,16 +10,22 @@ import React from "react";
 export const Header = () => {
   const pathname = usePathname();
   const { setTheme, theme } = useTheme();
+  const { increaseFontSize, decreaseFontSize } = useFontSize();
+
   return (
-    <div className="flex w-full items-center justify-between fixed h-20 inset-x-0 top-0 z-10 bg-base-100 border-b-2 border-base-200">
+    <div className="flex p-4 w-full items-center justify-between fixed h-20 inset-x-0 top-0 z-10 bg-base-100 border-b-2 border-base-200">
       <div className="flex items-center gap-2">
         <Link href={"/"} className="btn btn-ghost text-xl">
           Liga
         </Link>
       </div>
       <div className="flex items-center gap-2">
-        <button className="btn btn-primary">A+</button>
-        <button className="btn btn-primary">A-</button>
+        <button onClick={decreaseFontSize} className="btn btn-primary">
+          A-
+        </button>
+        <button onClick={increaseFontSize} className="btn btn-primary">
+          A+
+        </button>
         <button
           onClick={() => setTheme("dark")}
           className={`btn ${
