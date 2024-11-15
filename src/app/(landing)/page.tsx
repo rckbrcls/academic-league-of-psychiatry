@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <div className="flex pt-20 min-h-screen">
-      <div className="w-full p-10">
+    <div className="flex pt-20 min-h-screen overflow-hidden">
+      <div className="w-full p-10 z-20">
         <p className="text-5xl font-bold">Liga Acadêmica de Psiquiatria</p>
         <p className="text-2xl mt-2 mb-8">
           Faculdade de Medicina de Jaú - Unoeste
@@ -21,7 +23,36 @@ export default function Home() {
           vitae nunc bibendum
         </p>
       </div>
-      <div className="bg-[#052B61] w-1/2 min-h-screen"></div>
+      <div className="bg-[#052B61] w-[45rem] min-h-screen flex items-center relative">
+        <div className="absolute z-10 -top-36 -left-36 w-96 h-96">
+          <Image
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+            src={"star.svg"}
+            alt="cover-meetings"
+          />
+        </div>
+        <div className="relative w-full h-auto">
+          <Image
+            src={"/grupo.png"}
+            alt="cover-meetings"
+            width={1920} // largura original da imagem
+            height={1080} // altura original da imagem
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </div>
+        <div className="absolute z-10 -bottom-28 -right-36 w-96 h-96">
+          <Image
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+            src={"star.svg"}
+            alt="cover-meetings"
+          />
+        </div>
+      </div>
     </div>
   );
 }

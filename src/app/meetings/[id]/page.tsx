@@ -80,7 +80,7 @@ export const MeetingDetailsHeader = () => {
       <div className="flex items-center gap-2">
         <button onClick={() => router.back()} className="btn btn-primary">
           <ChevronLeft />
-          Volltar
+          Voltar
         </button>
       </div>
       <div className="flex items-center gap-2">

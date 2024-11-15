@@ -1,8 +1,39 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Members() {
   return (
-    <div className="pb-40 px-10 pt-24">
+    <div className="pb-40 px-10 pt-24 relative overflow-hidden">
+      <div className=" absolute -top-10 -left-28 -z-10  w-96 h-96">
+        <Image
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+          src={"star.svg"}
+          alt="cover-meetings"
+        />
+      </div>
+
+      <div className="absolute -bottom-10 -right-28 -z-10  w-96 h-96">
+        <Image
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+          src={"star.svg"}
+          alt="cover-meetings"
+        />
+      </div>
+
+      <div className="absolute -bottom-10 -left-28 -z-10  w-96 h-96">
+        <Image
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+          src={"circle.svg"}
+          alt="cover-meetings"
+        />
+      </div>
+
       <p className="text-4xl font-bold">Membros da Liga</p>
       <div className="glass-dark w-full rounded-xl p-4 flex flex-col gap-4 mt-6">
         <p className="text-2xl font-bold">Diretoria</p>

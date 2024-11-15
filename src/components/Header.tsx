@@ -6,6 +6,7 @@ import { Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -13,10 +14,18 @@ export const Header = () => {
   const { increaseFontSize, decreaseFontSize } = useFontSize();
 
   return (
-    <div className="flex p-4 w-full items-center justify-between fixed h-20 inset-x-0 top-0 z-10 bg-base-100 border-b-2 border-base-200">
+    <div className="flex z-50 p-4 w-full items-center justify-between fixed h-20 inset-x-0 top-0 bg-base-100 border-b-2 border-base-200">
       <div className="flex items-center gap-2">
-        <Link href={"/"} className="btn btn-ghost text-xl">
-          Liga
+        <Link passHref href={"/"}>
+          <div className="w-16 h-16 relative btn btn-ghost rounded-full">
+            <Image
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+              src={"/liga-logo.png"}
+              alt="cover-meetings"
+            />
+          </div>
         </Link>
       </div>
       <div className="flex items-center gap-2">
