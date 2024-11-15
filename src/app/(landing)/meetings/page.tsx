@@ -1,3 +1,4 @@
+import { SVG } from "@/components/SVG";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,32 +6,16 @@ import React from "react";
 export default function Meetings() {
   return (
     <div className="pb-40 px-10 pt-24">
-      <div className=" absolute -top-10 -left-28 -z-10  w-96 h-96">
-        <Image
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          src={"circle.svg"}
-          alt="cover-meetings"
-        />
-      </div>
-
-      <div className="absolute -bottom-10 -right-28 -z-10  w-96 h-96">
-        <Image
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          src={"star.svg"}
-          alt="cover-meetings"
-        />
-      </div>
+      <SVG className="absolute -top-10 -left-28 -z-10  w-96 h-96" />
+      <SVG className="absolute -bottom-10 -right-28 -z-10  w-96 h-96" />
 
       <p className="text-4xl font-bold">Reuniões</p>
       <div className="flex mt-4">
-        <select className="select glass-dark select-bordered w-full max-w-xs">
-          <option disabled selected>
-            Ordenar por
-          </option>
+        <select
+          className="select glass-dark select-bordered w-full max-w-xs"
+          defaultValue={"Ordenar por"}
+        >
+          <option disabled>Ordenar por</option>
           <option>Data mais recente</option>
           <option>Data mais antiga</option>
         </select>

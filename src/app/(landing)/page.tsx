@@ -1,3 +1,4 @@
+import { SVG } from "@/components/SVG";
 import Image from "next/image";
 
 export default function Home() {
@@ -24,34 +25,18 @@ export default function Home() {
         </p>
       </div>
       <div className="bg-[#052B61] w-[45rem] min-h-screen flex items-center relative">
-        <div className="absolute z-10 -top-36 -left-36 w-96 h-96">
-          <Image
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-            src={"star.svg"}
-            alt="cover-meetings"
-          />
-        </div>
+        <SVG className="absolute z-10 -top-36 -left-36 w-96 h-96" />
         <div className="relative w-full h-auto">
           <Image
             src={"/grupo.png"}
             alt="cover-meetings"
-            width={1920} // largura original da imagem
-            height={1080} // altura original da imagem
+            width={1920}
+            height={1080}
             style={{ objectFit: "cover" }}
             priority
           />
         </div>
-        <div className="absolute z-10 -bottom-28 -right-36 w-96 h-96">
-          <Image
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-            src={"star.svg"}
-            alt="cover-meetings"
-          />
-        </div>
+        <SVG className="absolute z-10 -bottom-28 -right-36 w-96 h-96" />
       </div>
     </div>
   );

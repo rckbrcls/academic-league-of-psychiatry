@@ -1,38 +1,16 @@
 import React from "react";
-import Image from "next/image";
+
+import { SVG } from "@/components/SVG";
 
 export default function Members() {
   return (
     <div className="pb-40 px-10 pt-24 relative overflow-hidden">
-      <div className=" absolute -top-10 -left-28 -z-10  w-96 h-96">
-        <Image
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          src={"star.svg"}
-          alt="cover-meetings"
-        />
-      </div>
-
-      <div className="absolute -bottom-10 -right-28 -z-10  w-96 h-96">
-        <Image
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          src={"star.svg"}
-          alt="cover-meetings"
-        />
-      </div>
-
-      <div className="absolute -bottom-10 -left-28 -z-10  w-96 h-96">
-        <Image
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          src={"circle.svg"}
-          alt="cover-meetings"
-        />
-      </div>
+      <SVG className=" absolute -top-10 -left-28 -z-10  w-96 h-96" />
+      <SVG className="absolute -bottom-10 -right-28 -z-10  w-96 h-96" />
+      <SVG
+        className="absolute -bottom-10 -left-28 -z-10  w-96 h-96"
+        shape="circle"
+      />
 
       <p className="text-4xl font-bold">Membros da Liga</p>
       <div className="glass-dark w-full rounded-xl p-4 flex flex-col gap-4 mt-6">
