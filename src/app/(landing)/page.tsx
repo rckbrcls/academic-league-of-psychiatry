@@ -39,9 +39,9 @@ export default function Home() {
           e da empatia!
         </p>
       </div>
-      <div className="bg-[#052B61] w-[45rem] min-h-screen flex items-center relative">
+      <div className="bg-[#052B61] w-[60rem] min-h-screen flex items-center relative p-4">
         <SVG className="absolute z-10 -top-36 -left-36 w-96 h-96" />
-        <div className="relative w-full h-auto">
+        <div className="relative w-full h-auto ">
           <Image
             src={"/grupo.png"}
             alt="cover-meetings"
@@ -49,6 +49,7 @@ export default function Home() {
             height={1080}
             style={{ objectFit: "cover" }}
             priority
+            className="rounded-xl"
           />
         </div>
         <SVG className="absolute z-10 -bottom-28 -right-36 w-96 h-96" />
