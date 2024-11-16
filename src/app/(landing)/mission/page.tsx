@@ -48,7 +48,7 @@ export default function Mission() {
   ];
 
   return (
-    <>
+    <div className="relative overflow-x-hidden">
       <SVG
         className="absolute -top-10 -right-36 -z-10  w-96 h-96"
         shape="circle"
@@ -67,6 +67,6 @@ export default function Mission() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
