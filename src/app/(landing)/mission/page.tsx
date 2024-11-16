@@ -20,35 +20,35 @@ export default function Mission() {
   const boxes: BoxProps[] = [
     {
       className: "col-span-2",
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      text: `Nossa missão na Liga Acadêmica de Psiquiatria é promover o conhecimento aprofundado e responsável sobre saúde mental. Queremos oferecer aos estudantes e futuros profissionais da medicina um espaço que os capacite tanto academicamente quanto humanamente, buscando sempre a ética e a empatia como pilares fundamentais na prática psiquiátrica.`,
       title: "Nossa Missão",
     },
     {
       className: "col-span-1 row-span-2",
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat`,
-      title: "Lorem Ipsum",
+      text: `Acreditamos que o estudo da psiquiatria é essencial para desmistificar preconceitos e promover um cuidado mais humanizado. Nossos membros têm a oportunidade de participar de palestras, workshops e discussões sobre temas relevantes, como transtornos mentais, neurociência e inovações tecnológicas aplicadas ao diagnóstico e tratamento.`,
+      title: "Nossos Valores",
     },
     {
       className: "col-span-1",
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+      text: `Com o intuito de fomentar uma formação médica completa, a liga incentiva a prática de habilidades clínicas e de comunicação, permitindo que nossos membros estejam cada vez mais preparados para os desafios da saúde mental.`,
     },
     {
       className: "col-span-1",
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+      text: `Promovemos encontros com profissionais experientes e especialistas na área de psiquiatria, que compartilham suas vivências e conhecimentos, proporcionando uma perspectiva prática e inspiradora para nossos estudantes.`,
     },
     {
       className: "col-span-2",
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-      title: "Lorem Ipsum",
+      text: `Nosso compromisso é criar um ambiente de aprendizado colaborativo, onde cada estudante possa crescer academicamente e se tornar um agente de mudança para o futuro da psiquiatria e da saúde mental, promovendo o bem-estar e a compreensão dentro e fora da comunidade acadêmica.`,
+      title: "Compromisso",
     },
     {
       className: "col-span-1",
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+      text: `Além das atividades acadêmicas, a liga valoriza o desenvolvimento de uma consciência social, incentivando projetos de extensão voltados à comunidade, contribuindo para a disseminação de conhecimento e cuidado em saúde mental.`,
     },
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-4 auto-rows-fr px-10 pt-28 pb-10">
+    <>
       <SVG
         className="absolute -top-10 -right-36 -z-10  w-96 h-96"
         shape="circle"
@@ -57,14 +57,16 @@ export default function Mission() {
         className="absolute -bottom-10 -left-52 -z-10  w-96 h-96"
         shape="circle"
       />
-      {boxes.map((box, i) => (
-        <Box
-          key={i}
-          className={box.className}
-          text={box.text}
-          title={box.title}
-        />
-      ))}
-    </div>
+      <div className=" grid grid-cols-3 gap-4 auto-rows-fr px-10 pt-28 pb-10">
+        {boxes.map((box, i) => (
+          <Box
+            key={i}
+            className={box.className}
+            text={box.text}
+            title={box.title}
+          />
+        ))}
+      </div>
+    </>
   );
 }
