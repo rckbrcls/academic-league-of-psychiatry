@@ -8,6 +8,7 @@ interface MeetingCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  extendedText: string; // Texto mais extenso para a página de detalhes
 }
 
 const MeetingCard: React.FC<MeetingCardProps> = ({
@@ -15,9 +16,21 @@ const MeetingCard: React.FC<MeetingCardProps> = ({
   title,
   description,
   imageUrl,
+  extendedText,
 }) => {
   return (
-    <Link passHref href={`/meetings/${id}`}>
+    <Link
+      href={{
+        pathname: `/meetings/${id}`,
+        query: {
+          title,
+          description,
+          imageUrl,
+          extendedText,
+        },
+      }}
+      passHref
+    >
       <div className="glass-dark w-full h-full rounded-lg p-4 hover:scale-105 hover:cursor-pointer duration-500">
         <div className="relative w-full h-48">
           <Image
@@ -26,7 +39,7 @@ const MeetingCard: React.FC<MeetingCardProps> = ({
             style={{ objectFit: "cover" }}
             priority
             src={imageUrl}
-            alt="cover-meetings"
+            alt={title}
           />
         </div>
         <p className="text-2xl font-bold mt-4">{title}</p>
@@ -44,7 +57,9 @@ export default function Meetings() {
       description:
         "Discussão sobre as últimas abordagens terapêuticas para depressão e ansiedade, além de estratégias para identificação precoce.",
       imageUrl:
-        "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=300&fit=crop", // Image of a group meeting
+        "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=300&fit=crop",
+      extendedText:
+        "Esta reunião discutirá estudos de caso e novas pesquisas sobre depressão e ansiedade, buscando fornecer insights sobre estratégias terapêuticas eficazes e práticas de prevenção. Abordaremos as abordagens de tratamento mais recentes e práticas recomendadas para lidar com esses transtornos complexos...",
     },
     {
       id: 2,
@@ -52,7 +67,9 @@ export default function Meetings() {
       description:
         "Sessão prática para explorar diferentes técnicas de psicoterapia com base em estudos de caso.",
       imageUrl:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop", // Therapy session image
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop",
+      extendedText:
+        "Neste workshop, os participantes terão a chance de praticar técnicas de psicoterapia em um ambiente controlado. Exploraremos métodos variados, discutindo estudos de caso reais e analisando as respostas terapêuticas...",
     },
     {
       id: 3,
@@ -60,7 +77,9 @@ export default function Meetings() {
       description:
         "Exploração dos impactos da tecnologia moderna sobre a saúde mental, incluindo benefícios e desafios.",
       imageUrl:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=300&fit=crop", // Image with technology and health discussion
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=300&fit=crop",
+      extendedText:
+        "Uma análise aprofundada de como a tecnologia influencia a saúde mental, abordando tanto as vantagens quanto os riscos associados. A reunião cobrirá temas como telemedicina, aplicativos de saúde mental e o uso de IA...",
     },
     {
       id: 4,
@@ -68,7 +87,9 @@ export default function Meetings() {
       description:
         "Um debate sobre os estigmas em torno das doenças mentais e como combatê-los na prática clínica e social.",
       imageUrl:
-        "https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?w=500&h=300&fit=crop", // Debate and mental health image
+        "https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?w=500&h=300&fit=crop",
+      extendedText:
+        "Este debate busca explorar as raízes do estigma associado às doenças mentais e discutir estratégias para reduzir preconceitos. Os participantes aprenderão sobre abordagens de sensibilização e inclusão...",
     },
     {
       id: 5,
@@ -76,7 +97,9 @@ export default function Meetings() {
       description:
         "Análise das abordagens para tratamento e gestão dos transtornos de humor mais comuns.",
       imageUrl:
-        "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&h=300&fit=crop", // Image of mental health professionals
+        "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&h=300&fit=crop",
+      extendedText:
+        "Uma discussão aprofundada sobre os transtornos de humor, suas causas e os tratamentos mais eficazes. A reunião abrangerá estudos recentes e estratégias para apoiar indivíduos com transtornos de humor...",
     },
     {
       id: 6,
@@ -84,7 +107,9 @@ export default function Meetings() {
       description:
         "Palestras sobre as descobertas recentes em neurociência e sua aplicação no entendimento do comportamento humano.",
       imageUrl:
-        "https://images.unsplash.com/photo-1531312267129-2af590be3d24?w=500&h=300&fit=crop", // Neuroscience and lecture image
+        "https://images.unsplash.com/photo-1510070009289-b5bc34383727?w=500&h=300&fit=crop", // Imagem alternativa sobre neurociência
+      extendedText:
+        "Um simpósio com especialistas em neurociência que abordarão as mais recentes descobertas sobre como o cérebro influencia o comportamento humano. Este evento visa fornecer uma visão abrangente dos avanços em neurociência...",
     },
   ];
 
@@ -112,6 +137,7 @@ export default function Meetings() {
             title={meeting.title}
             description={meeting.description}
             imageUrl={meeting.imageUrl}
+            extendedText={meeting.extendedText} // Passa o texto extenso para a página de detalhes
           />
         ))}
       </div>

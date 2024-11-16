@@ -3,11 +3,19 @@
 import { useFontSize } from "@/context/FontSizeContext";
 import { useTheme } from "@/context/ThemeContext";
 import { ChevronLeft, Moon, Sun } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import React from "react";
 
 export default function MeetingDetails() {
+  const searchParams = useSearchParams();
+  const title = searchParams.get("title") || "Título não disponível";
+  const description =
+    searchParams.get("description") || "Descrição não disponível";
+  const imageUrl = searchParams.get("imageUrl") || "/meeting.png";
+  const extendedText =
+    searchParams.get("extendedText") || "Texto extenso não disponível.";
+
   return (
     <div>
       <MeetingDetailsHeader />
@@ -16,55 +24,15 @@ export default function MeetingDetails() {
           fill
           style={{ objectFit: "cover" }}
           priority
-          src={"/meeting.png"}
+          src={imageUrl}
           alt="cover-meetings"
         />
       </div>
 
       <div className="p-10">
-        <p className="text-5xl font-bold">Reunião sobre algo</p>
-        <p className=" mt-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
-          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
-          lorem. Nunc porta finibus dolor, ut ullamcorper ex feugiat in.
-          Suspendisse id vehicula dui. Vivamus maximus ex neque. Phasellus
-          scelerisque tempus massa, luctus rutrum tortor aliquet quis. In in
-          tortor arcu. Nunc ut neque eu mauris tempor molestie sit amet vitae
-          urna. Pellentesque vel quam gravida augue hendrerit consequat at ac
-          lectus. Sed pulvinar risus vitae dapibus interdum. Integer eget
-          rhoncus libero. Vestibulum ante ipsum primis in faucibus orci luctus
-          et ultrices posuere cubilia curae; Pellentesque sit amet augue
-          feugiat, suscipit est nec, mattis sem. Nunc felis massa, vestibulum
-          vitae nunc bibendum
-        </p>
-        <p className=" mt-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
-          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
-          lorem. Nunc porta finibus dolor, ut ullamcorper ex feugiat in.
-          Suspendisse id vehicula dui. Vivamus maximus ex neque. Phasellus
-          scelerisque tempus massa, luctus rutrum tortor aliquet quis. In in
-          tortor arcu. Nunc ut neque eu mauris tempor molestie sit amet vitae
-          urna. Pellentesque vel quam gravida augue hendrerit consequat at ac
-          lectus. Sed pulvinar risus vitae dapibus interdum. Integer eget
-          rhoncus libero. Vestibulum ante ipsum primis in faucibus orci luctus
-          et ultrices posuere cubilia curae; Pellentesque sit amet augue
-          feugiat, suscipit est nec, mattis sem. Nunc felis massa, vestibulum
-          vitae nunc bibendum
-        </p>
-        <p className=" mt-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
-          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
-          lorem. Nunc porta finibus dolor, ut ullamcorper ex feugiat in.
-          Suspendisse id vehicula dui. Vivamus maximus ex neque. Phasellus
-          scelerisque tempus massa, luctus rutrum tortor aliquet quis. In in
-          tortor arcu. Nunc ut neque eu mauris tempor molestie sit amet vitae
-          urna. Pellentesque vel quam gravida augue hendrerit consequat at ac
-          lectus. Sed pulvinar risus vitae dapibus interdum. Integer eget
-          rhoncus libero. Vestibulum ante ipsum primis in faucibus orci luctus
-          et ultrices posuere cubilia curae; Pellentesque sit amet augue
-          feugiat, suscipit est nec, mattis sem. Nunc felis massa, vestibulum
-          vitae nunc bibendum
-        </p>
+        <p className="text-5xl font-bold">{title}</p>
+        <p className="mt-4 text-lg font-semibold">{description}</p>
+        <p className="mt-4 text-lg">{extendedText}</p>
       </div>
     </div>
   );
@@ -76,7 +44,7 @@ export const MeetingDetailsHeader = () => {
   const { increaseFontSize, decreaseFontSize } = useFontSize();
 
   return (
-    <div className="flex p-4 w-full items-center justify-between fixed h-20 inset-x-0 top-0 z-10 ">
+    <div className="flex p-4 w-full items-center justify-between fixed h-20 inset-x-0 top-0 z-10">
       <div className="flex items-center gap-2">
         <button onClick={() => router.back()} className="btn btn-primary">
           <ChevronLeft />
