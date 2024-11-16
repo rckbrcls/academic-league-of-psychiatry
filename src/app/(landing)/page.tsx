@@ -9,19 +9,34 @@ export default function Home() {
         <p className="text-2xl mt-2 mb-8">
           Faculdade de Medicina de Jaú - Unoeste
         </p>
-        <p className="text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
-          arcu neque. In felis nunc, aliquam et neque quis, tempus eleifend
-          lorem. Nunc porta finibus dolor, ut ullamcorper ex feugiat in.
-          Suspendisse id vehicula dui. Vivamus maximus ex neque. Phasellus
-          scelerisque tempus massa, luctus rutrum tortor aliquet quis. In in
-          tortor arcu. Nunc ut neque eu mauris tempor molestie sit amet vitae
-          urna. Pellentesque vel quam gravida augue hendrerit consequat at ac
-          lectus. Sed pulvinar risus vitae dapibus interdum. Integer eget
-          rhoncus libero. Vestibulum ante ipsum primis in faucibus orci luctus
-          et ultrices posuere cubilia curae; Pellentesque sit amet augue
-          feugiat, suscipit est nec, mattis sem. Nunc felis massa, vestibulum
-          vitae nunc bibendum
+        <p className="mt-4 text-lg">
+          A Liga Acadêmica de Psiquiatria (LAP) da Faculdade de Medicina de Jaú
+          – Unoeste é uma organização estudantil formada por alunos
+          comprometidos com o estudo, a pesquisa e a promoção da saúde mental.
+          Nosso objetivo é ampliar o conhecimento sobre a psiquiatria,
+          desmistificar os estigmas relacionados às doenças mentais e promover a
+          humanização na prática médica.
+        </p>
+        <p className="mt-4 text-lg">
+          Composta por estudantes da Faculdade de Medicina da Unoeste, a LAP
+          proporciona um espaço de aprendizado e troca de experiências, onde
+          conhecimentos teóricos e práticos se complementam. Nossa liga busca
+          aprofundar o entendimento das doenças mentais, incluindo transtornos
+          de humor, ansiedade, dependência química e outras condições
+          psicológicas, além de discutir temas emergentes na área da saúde
+          mental, como a psicoterapia, o uso da tecnologia no diagnóstico e
+          tratamento e a neurociência aplicada.
+        </p>
+        <p className="mt-4 text-lg">
+          Através de eventos, palestras, workshops e projetos de extensão,
+          incentivamos nossos membros a desenvolver uma visão crítica e ética
+          sobre a prática psiquiátrica, com o objetivo de formar médicos mais
+          empáticos e conscientes dos desafios e das responsabilidades que
+          envolvem o cuidado com a saúde mental.
+        </p>
+        <p className="mt-4 text-lg">
+          Venha conhecer e fazer parte da nossa jornada em prol do conhecimento
+          e da empatia!
         </p>
       </div>
       <div className="bg-[#052B61] w-[45rem] min-h-screen flex items-center relative">
