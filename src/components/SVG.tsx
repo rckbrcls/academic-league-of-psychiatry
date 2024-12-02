@@ -17,7 +17,7 @@ export const SVG = ({
   shape,
 }: IProps) => {
   const { theme } = useTheme();
-  const color = theme == "dark" ? "#1758AF" : "#67cafd";
+  const color = theme == "dark" ? "transparent" : "#67cafd";
 
   return (
     <>
