@@ -1,4 +1,3 @@
-import { SVG } from "@/components/SVG";
 import Image from "next/image";
 
 export default function Home() {
@@ -40,7 +39,6 @@ export default function Home() {
         </p>
       </div>
       <div className="bg-[#052B61] w-[60rem] min-h-screen flex items-center relative p-4">
-        <SVG className="absolute z-10 -top-36 -left-36 w-96 h-96" />
         <div className="relative w-full h-auto ">
           <Image
             src={"/grupo.png"}
@@ -52,7 +50,6 @@ export default function Home() {
             className="rounded-xl"
           />
         </div>
-        <SVG className="absolute z-10 -bottom-28 -right-36 w-96 h-96" />
       </div>
     </div>
   );

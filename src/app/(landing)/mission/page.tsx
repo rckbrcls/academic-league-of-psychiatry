@@ -1,4 +1,3 @@
-import { SVG } from "@/components/SVG";
 import React from "react";
 
 interface BoxProps {
@@ -49,14 +48,6 @@ export default function Mission() {
 
   return (
     <div className="relative overflow-x-hidden">
-      <SVG
-        className="absolute -top-10 -right-36 -z-10  w-96 h-96"
-        shape="circle"
-      />
-      <SVG
-        className="absolute -bottom-10 -left-52 -z-10  w-96 h-96"
-        shape="circle"
-      />
       <div className=" grid grid-cols-3 gap-4 auto-rows-fr px-10 pt-28 pb-10">
         {boxes.map((box, i) => (
           <Box
