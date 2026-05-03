@@ -1,31 +1,30 @@
 # Academic League of Psychiatry
 
-> **Status:** Maintenance status to be confirmed
+> **Status:** To be confirmed
 > The repository contains a working institutional site, but placeholder-like content should be reviewed before treating it as production-ready.
 
 Website for the Academic League of Psychiatry at Faculdade de Medicina de Jau - Unoeste. It presents the league, its mission, members, meetings, and educational focus around mental health and psychiatric training.
 
 ## Summary
 
-- [What it is](#what-it-is)
-- [Goals](#goals)
-- [Site sections](#site-sections)
-- [Project map](#project-map)
-- [Current state](#current-state)
-- [Working notes](#working-notes)
+- Institutional Next.js site for the Academic League of Psychiatry at Faculdade de Medicina de Jau - Unoeste.
+- Solves public presentation for mission, values, members, meetings, and educational psychiatry programming.
+- Main stack: Next.js, React, TypeScript, theme/font-size context providers, public image assets, and small component modules.
+- Current status: to be confirmed because some member/content data still looks placeholder-like.
+- Technical value: demonstrates a restrained institutional site with accessibility-oriented theme and font-size controls.
 
-## What it is
+## Overview
 
 This is a Next.js site for an academic medical league. The content explains the league's purpose, values, event programming, and member structure while giving students and visitors a clear institutional point of reference.
 
-## Goals
+## Motivation
 
 - Present the league as a serious academic and extension initiative.
 - Explain the role of psychiatry education, research, events, and humanized care.
 - Organize public pages for mission, members, meetings, and meeting details.
 - Keep the site simple enough for non-technical maintainers to update.
 
-## Site sections
+## Features
 
 - Home page with institutional introduction and group image.
 - Mission page with the league's values, commitments, and educational purpose.
@@ -33,7 +32,7 @@ This is a Next.js site for an academic medical league. The content explains the 
 - Meetings page with cards for discussions, workshops, debates, and symposiums.
 - Meeting detail page for deeper event context.
 
-## Project map
+## Project Structure
 
 ```text
 academic-league-of-psychiatry/
@@ -44,11 +43,11 @@ academic-league-of-psychiatry/
 └── package.json
 ```
 
-## Current state
+## Current Status
 
 The repository is a small institutional web app. Some content is still placeholder-like, especially member names and remote example images, so it should be reviewed before being treated as final public data.
 
-## Working notes
+## Known Limitations
 
 - Keep medical/institutional wording careful and factual.
 - Replace placeholder people and remote stock images with approved league assets before launch.
