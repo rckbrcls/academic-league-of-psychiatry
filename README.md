@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Academic League of Psychiatry
 
-## Getting Started
+> **Status:** Maintenance status to be confirmed
+> The repository contains a working institutional site, but placeholder-like content should be reviewed before treating it as production-ready.
 
-First, run the development server:
+Website for the Academic League of Psychiatry at Faculdade de Medicina de Jau - Unoeste. It presents the league, its mission, members, meetings, and educational focus around mental health and psychiatric training.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Summary
+
+- [What it is](#what-it-is)
+- [Goals](#goals)
+- [Site sections](#site-sections)
+- [Project map](#project-map)
+- [Current state](#current-state)
+- [Working notes](#working-notes)
+
+## What it is
+
+This is a Next.js site for an academic medical league. The content explains the league's purpose, values, event programming, and member structure while giving students and visitors a clear institutional point of reference.
+
+## Goals
+
+- Present the league as a serious academic and extension initiative.
+- Explain the role of psychiatry education, research, events, and humanized care.
+- Organize public pages for mission, members, meetings, and meeting details.
+- Keep the site simple enough for non-technical maintainers to update.
+
+## Site sections
+
+- Home page with institutional introduction and group image.
+- Mission page with the league's values, commitments, and educational purpose.
+- Members page with board and member presentation.
+- Meetings page with cards for discussions, workshops, debates, and symposiums.
+- Meeting detail page for deeper event context.
+
+## Project map
+
+```text
+academic-league-of-psychiatry/
+├── src/app/        # Next.js App Router pages and layouts
+├── src/components/ # Header and meeting detail header
+├── src/context/    # Theme and font-size context providers
+├── public/         # League assets and images
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Current state
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The repository is a small institutional web app. Some content is still placeholder-like, especially member names and remote example images, so it should be reviewed before being treated as final public data.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Working notes
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Keep medical/institutional wording careful and factual.
+- Replace placeholder people and remote stock images with approved league assets before launch.
+- Keep accessibility controls such as theme and font-size context intact.
