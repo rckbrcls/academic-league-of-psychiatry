@@ -1,18 +1,17 @@
 # Screenshots
 
-## Summary
+This folder is reserved for project screenshots that can be referenced from the root `README.md` or future release notes.
 
-- Companion folder for the Academic League of Psychiatry site screenshots.
-- Stores screenshots that should be referenced from the main project README.
-- Current status: placeholder checklist; screenshots still need to be added.
+No screenshot image files are currently tracked in this folder.
 
-## Screenshots / Demo
+Recommended screenshots to add:
 
-Add project screenshots here and reference them from the main README.
+- Home page.
+- Mission page.
+- Members page.
+- Meetings grid.
+- Meeting detail page.
+- Mobile viewport.
+- Light and dark theme examples.
 
-Recommended screenshots:
-
-- Home screen
-- Main navigation
-- Content/detail page
-- Mobile layout
+When screenshots are added, use stable filenames and update the root documentation with relative links.
